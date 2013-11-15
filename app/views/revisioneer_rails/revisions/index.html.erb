@@ -1,2 +1,17 @@
-<h1>Revisions</h1>
-<%= deployments %>
+<h2>Revisions</h2>
+<% if deployments.empty? %>
+  <p>Bis jetzt wurden noch keine Deployments erfasst.</p>
+<% else %>
+  <ul>
+    <%- deployments.each do |deployment| %>
+      <li>
+        <h3><%= deployment.deployed_at %></h3>
+        <ul>
+          <% deployment.messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

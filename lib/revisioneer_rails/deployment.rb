@@ -5,7 +5,12 @@ module RevisioneerRails
   class Deployment < Struct.new(:sha, :messages)
     def self.load page = 1, limit = 20
       url = ::RevisioneerRails.config.url + "/deployments"
-      response = ::Typhoeus.get(url, header: { "API-TOKEN" => ::RevisioneerRails.config.api_token })
+      request = Typhoeus::Request.new(
+        url,
+        method: :get,
+        headers: { "API-TOKEN" => ::RevisioneerRails.config.api_token }
+      )
+      response = request.run
       json = ::JSON.parse response.body
 
       json.map { |deploy_data|
