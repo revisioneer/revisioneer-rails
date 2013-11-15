@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["nicolai86@me.com"]
   spec.description   = %q{Rails engine to consume and present revisioneer service}
   spec.summary       = %q{Rails engine to consume and present revisioneer}
-  spec.homepage      = ""
+  spec.homepage      = "http://blog.nicolai86.eu"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
