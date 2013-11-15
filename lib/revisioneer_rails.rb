@@ -1,5 +1,16 @@
+require "revisioneer_rails/engine"
 require "revisioneer_rails/version"
 
 module RevisioneerRails
-  # Your code goes here...
+  Config = Struct.new(:url, :api_token)
+
+  def self.config
+    @@config
+  end
+
+  def self.configure
+    @@config = Config.new
+    yield @@config if block_given?
+    @@config
+  end
 end
