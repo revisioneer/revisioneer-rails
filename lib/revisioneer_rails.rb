@@ -1,3 +1,4 @@
+require "revisioneer_rails/deployment"
 require "revisioneer_rails/engine"
 require "revisioneer_rails/version"
 
