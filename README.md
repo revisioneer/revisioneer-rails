@@ -11,7 +11,7 @@ Add this line to your application's Gemfile:
 
 ``` ruby
 # Gemfile
-gem 'revisioneer_rails'
+gem "revisioneer_rails"
 ```
 
 Next mount the engine to wherever you want the revisions to be displayed:
