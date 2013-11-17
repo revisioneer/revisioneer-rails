@@ -5,6 +5,8 @@ In order to use it you first need to have an account for it.
 
 To add deployments to revisioneer you need to integrate it into your deployment process.
 
+If you are using mina to power your deployments you might want to take a look at [mina-revisioneer][2] to automatically push informations to revisioneer.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -61,3 +63,4 @@ Lastly, restart your application server
 5. Create new Pull Request
 
 [1]:https://github.com/nicolai86/revisioneer
+[2]:https://github.com/nicolai86/mina-revisioneer
