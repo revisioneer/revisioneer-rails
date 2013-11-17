@@ -46,12 +46,6 @@ RevisioneerRails.configure do |config|
 end unless obj.empty?
 ```
 
-And then execute:
-
-``` ruby
-$ bundle
-```
-
 Lastly, restart your application server
 
 ## TODO
