@@ -54,6 +54,10 @@ $ bundle
 
 Lastly, restart your application server
 
+## TODO
+
+- add tests for the revisioneer client
+
 ## Contributing
 
 1. Fork it
