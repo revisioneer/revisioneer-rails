@@ -1,3 +1,9 @@
+<style>
+  .deployment li:first-line {
+    font-weight: bold;
+  }
+</style>
+
 <h2>Revisions</h2>
 <% if deployments.empty? %>
   <p>Bis jetzt wurden noch keine Deployments erfasst.</p>
@@ -5,10 +11,12 @@
   <ul>
     <%- deployments.each do |deployment| %>
       <li>
-        <h3><%= deployment.deployed_at %></h3>
-        <ul>
+        <h3><%= deployment.deployed_at.strftime("%Y-%m-%d %H:%M") %></h3>
+        <ul class="deployment">
           <% deployment.messages.each do |message| %>
-            <li><%= message %></li>
+            <li style="padding-bottom: 10px">
+              <%=raw message.gsub(/\n/,"<br>") %>
+            </li>
           <% end %>
         </ul>
       </li>
