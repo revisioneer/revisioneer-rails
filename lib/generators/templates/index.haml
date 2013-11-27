@@ -1,0 +1,12 @@
+%h2 Revisions
+- if deployments.empty?
+  %p Bis jetzt wurden noch keine Deployments erfasst.
+- else
+  %ul
+    - deployments.each do |deployment|
+      %li
+        %h3= deployment.deployed_at.strftime("%Y-%m-%d %H:%M")
+        %ul.deployment
+          - deployment.messages.each do |message|
+            %li{style: "padding-bottom: 10px"}
+              =raw message.gsub(/\n/,"<br>")
