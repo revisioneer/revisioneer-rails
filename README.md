@@ -16,6 +16,15 @@ Add this line to your application's Gemfile:
 gem "revisioneer_rails"
 ```
 
+### Generator
+run: 
+
+``` ruby
+rails generate revisioneer *your-api-token*
+```
+
+### Manuel
+
 Next mount the engine to wherever you want the revisions to be displayed:
 
 ``` ruby
@@ -47,6 +56,17 @@ end unless obj.empty?
 ```
 
 Lastly, restart your application server
+
+## Views
+
+You can generate the views for the revisions page with:
+
+```
+rails generate revisioneer:views
+```
+
+It generates the views under ```app/views/revisioneer_rails/revisions```
+
 
 ## TODO
 

@@ -1,0 +1,6 @@
+development: &dev
+  endpoint: "https://revisions.deployed.eu"
+  api_token: "<%= api_token %>"
+
+production:
+  <<: *dev
