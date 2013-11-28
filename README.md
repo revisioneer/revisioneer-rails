@@ -23,8 +23,6 @@ run:
 rails generate revisioneer *your-api-token*
 ```
 
-### Manuel
-
 Next mount the engine to wherever you want the revisions to be displayed:
 
 ``` ruby
