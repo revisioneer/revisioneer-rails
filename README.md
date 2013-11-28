@@ -17,7 +17,7 @@ gem "revisioneer_rails"
 ```
 
 ### Generator
-run: 
+run:
 
 ``` ruby
 rails generate revisioneer *your-api-token*
@@ -36,7 +36,7 @@ You need to add your revisioneer credentials to to a configuration file not unde
 
 ``` yaml
 development: &dev
-  endpoint: "https://revisioneer.io"
+  endpoint: "https://revisions.deployed.eu"
   api_token: "your api token"
 
 production:
